@@ -13,19 +13,19 @@
 @class zp01yx_bwusbWMPageController;
 
 /*
- *  WMPageController 的缓存设置，默认缓存为无限制，当收到 memoryWarning 时，会自动切换到低缓存模式 (WMPageControllerCachePolicyLowMemory)，并在一段时间后切换到 High .
-    收到多次警告后，会停留在到 WMPageControllerCachePolicyLowMemory 不再增长
+ *  WMPageController 的缓存设置，默认缓存为无限制，当收到 memoryWarning 时，会自动切换到低缓存模式 (zp01yx_bwusbWMPageControllerCachePolicyLowMemory)，并在一段时间后切换到 High .
+    收到多次警告后，会停留在到 zp01yx_bwusbWMPageControllerCachePolicyLowMemory 不再增长
  *
  *  The Default cache policy is No Limit, when recieved memory warning, page controller will switch mode to 'LowMemory'
     and continue to grow back after a while.
     If recieved too much times, the cache policy will stay at 'LowMemory' and don't grow back any more.
  */
-typedef NS_ENUM(NSInteger, WMPageControllerCachePolicy) {
-    WMPageControllerCachePolicyDisabled   = -1,  // Disable Cache
-    WMPageControllerCachePolicyNoLimit    = 0,   // No limit
-    WMPageControllerCachePolicyLowMemory  = 1,   // Low Memory but may block when scroll
-    WMPageControllerCachePolicyBalanced   = 3,   // Balanced ↑ and ↓
-    WMPageControllerCachePolicyHigh       = 5    // High
+typedef NS_ENUM(NSInteger, zp01yx_bwusbWMPageControllerCachePolicy) {
+    zp01yx_bwusbWMPageControllerCachePolicyDisabled   = -1,  // Disable Cache
+    zp01yx_bwusbWMPageControllerCachePolicyNoLimit    = 0,   // No limit
+    zp01yx_bwusbWMPageControllerCachePolicyLowMemory  = 1,   // Low Memory but may block when scroll
+    zp01yx_bwusbWMPageControllerCachePolicyBalanced   = 3,   // Balanced ↑ and ↓
+    zp01yx_bwusbWMPageControllerCachePolicyHigh       = 5    // High
 };
 
 typedef NS_ENUM(NSUInteger, WMPageControllerPreloadPolicy) {
@@ -35,8 +35,8 @@ typedef NS_ENUM(NSUInteger, WMPageControllerPreloadPolicy) {
 };
 
 NS_ASSUME_NONNULL_BEGIN
-extern NSString *const WMControllerDidAddToSuperViewNotification;
-extern NSString *const WMControllerDidFullyDisplayedNotification;
+extern NSString *const zp01yx_bwusbWMControllerDidAddToSuperViewNotification;
+extern NSString *const zp01yx_bwusbWMControllerDidFullyDisplayedNotification;
 @protocol WMPageControllerDataSource <NSObject>
 @optional
 
@@ -258,7 +258,7 @@ extern NSString *const WMControllerDidFullyDisplayedNotification;
 @property (nonatomic, assign) BOOL rememberLocation __deprecated_msg("Because of the cache policy,this property can abondon now.");
 
 /** 缓存的机制，默认为无限制 (如果收到内存警告, 会自动切换) */
-@property (nonatomic, assign) WMPageControllerCachePolicy cachePolicy;
+@property (nonatomic, assign) zp01yx_bwusbWMPageControllerCachePolicy cachePolicy;
 
 /** 预加载机制，在停止滑动的时候预加载 n 页 */
 @property (nonatomic, assign) WMPageControllerPreloadPolicy preloadPolicy;
