@@ -16,7 +16,11 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "TianMaYunXi"
+<<<<<<< HEAD
   spec.version      = "0.0.6"
+=======
+  spec.version      = "0.0.4"
+>>>>>>> ef4c4a3ed6ed7212a8c582dcaf3e62cf3cea4582
   spec.summary      = "天马云息"
 
   # This description is used to generate tags and improve search results.
@@ -149,6 +153,10 @@ Pod::Spec.new do |spec|
     spec.dependency "MJExtension"
     spec.dependency "MBProgressHUD"
     spec.dependency "Masonry"
+<<<<<<< HEAD
+=======
+    spec.dependency "WMPageController"
+>>>>>>> ef4c4a3ed6ed7212a8c582dcaf3e62cf3cea4582
     spec.dependency "TTGTagCollectionView"
     spec.dependency "FDFullscreenPopGesture"
 
