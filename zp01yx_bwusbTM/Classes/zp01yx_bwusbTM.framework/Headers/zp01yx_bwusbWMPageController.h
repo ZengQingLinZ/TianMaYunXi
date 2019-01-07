@@ -28,10 +28,10 @@ typedef NS_ENUM(NSInteger, zp01yx_bwusbWMPageControllerCachePolicy) {
     zp01yx_bwusbWMPageControllerCachePolicyHigh       = 5    // High
 };
 
-typedef NS_ENUM(NSUInteger, WMPageControllerPreloadPolicy) {
-    WMPageControllerPreloadPolicyNever     = 0, // Never pre-load controller.
-    WMPageControllerPreloadPolicyNeighbour = 1, // Pre-load the controller next to the current.
-    WMPageControllerPreloadPolicyNear      = 2  // Pre-load 2 controllers near the current.
+typedef NS_ENUM(NSUInteger, zp01yx_bwusbWMPageControllerPreloadPolicy) {
+    zp01yx_bwusbWMPageControllerPreloadPolicyNever     = 0, // Never pre-load controller.
+    zp01yx_bwusbWMPageControllerPreloadPolicyNeighbour = 1, // Pre-load the controller next to the current.
+    zp01yx_bwusbWMPageControllerPreloadPolicyNear      = 2  // Pre-load 2 controllers near the current.
 };
 
 NS_ASSUME_NONNULL_BEGIN
@@ -222,9 +222,9 @@ extern NSString *const zp01yx_bwusbWMControllerDidFullyDisplayedNotification;
  *  Menu view 的样式，默认为无下划线
  *  Menu view's style, now has two different styles, 'Line','default'
  */
-@property (nonatomic, assign) WMMenuViewStyle menuViewStyle;
+@property (nonatomic, assign) zp01yx_bwusbWMMenuViewStyle menuViewStyle;
 
-@property (nonatomic, assign) WMMenuViewLayoutMode menuViewLayoutMode;
+@property (nonatomic, assign) zp01yx_bwusbWMMenuViewLayoutMode menuViewLayoutMode;
 
 /**
  *  进度条的颜色，默认和选中颜色一致(如果 style 为 Default，则该属性无用)
@@ -261,7 +261,7 @@ extern NSString *const zp01yx_bwusbWMControllerDidFullyDisplayedNotification;
 @property (nonatomic, assign) zp01yx_bwusbWMPageControllerCachePolicy cachePolicy;
 
 /** 预加载机制，在停止滑动的时候预加载 n 页 */
-@property (nonatomic, assign) WMPageControllerPreloadPolicy preloadPolicy;
+@property (nonatomic, assign) zp01yx_bwusbWMPageControllerPreloadPolicy preloadPolicy;
 
 /** Whether ContentView bounces */
 @property (nonatomic, assign) BOOL bounces;

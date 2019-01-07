@@ -11,22 +11,22 @@
 #import "zp01yx_bwusbWMProgressView.h"
 @class zp01yx_bwusbWMMenuView;
 
-typedef NS_ENUM(NSUInteger, WMMenuViewStyle) {
-    WMMenuViewStyleDefault,      // 默认
-    WMMenuViewStyleLine,         // 带下划线 (若要选中字体大小不变，设置选中和非选中大小一样即可)
-    WMMenuViewStyleTriangle,     // 三角形 (progressHeight 为三角形的高, progressWidths 为底边长)
-    WMMenuViewStyleFlood,        // 涌入效果 (填充)
-    WMMenuViewStyleFloodHollow,  // 涌入效果 (空心的)
-    WMMenuViewStyleSegmented,    // 涌入带边框,即网易新闻选项卡
+typedef NS_ENUM(NSUInteger, zp01yx_bwusbWMMenuViewStyle) {
+    zp01yx_bwusbWMMenuViewStyleDefault,      // 默认
+    zp01yx_bwusbWMMenuViewStyleLine,         // 带下划线 (若要选中字体大小不变，设置选中和非选中大小一样即可)
+    zp01yx_bwusbWMMenuViewStyleTriangle,     // 三角形 (progressHeight 为三角形的高, progressWidths 为底边长)
+    zp01yx_bwusbWMMenuViewStyleFlood,        // 涌入效果 (填充)
+    zp01yx_bwusbWMMenuViewStyleFloodHollow,  // 涌入效果 (空心的)
+    zp01yx_bwusbWMMenuViewStyleSegmented,    // 涌入带边框,即网易新闻选项卡
 };
 
 // 原先基础上添加了几个方便布局的枚举，更多布局格式可以通过设置 `itemsMargins` 属性来自定义
 // 以下布局均只在 item 个数较少的情况下生效，即无法滚动 MenuView 时.
-typedef NS_ENUM(NSUInteger, WMMenuViewLayoutMode) {
-    WMMenuViewLayoutModeScatter, // 默认的布局模式, item 会均匀分布在屏幕上，呈分散状
-    WMMenuViewLayoutModeLeft,    // Item 紧靠屏幕左侧
-    WMMenuViewLayoutModeRight,   // Item 紧靠屏幕右侧
-    WMMenuViewLayoutModeCenter,  // Item 紧挨且居中分布
+typedef NS_ENUM(NSUInteger, zp01yx_bwusbWMMenuViewLayoutMode) {
+    zp01yx_bwusbWMMenuViewLayoutModeScatter, // 默认的布局模式, item 会均匀分布在屏幕上，呈分散状
+    zp01yx_bwusbWMMenuViewLayoutModeLeft,    // Item 紧靠屏幕左侧
+    zp01yx_bwusbWMMenuViewLayoutModeRight,   // Item 紧靠屏幕右侧
+    zp01yx_bwusbWMMenuViewLayoutModeCenter,  // Item 紧挨且居中分布
 };
 
 @protocol WMMenuViewDelegate <NSObject>
@@ -35,8 +35,8 @@ typedef NS_ENUM(NSUInteger, WMMenuViewLayoutMode) {
 - (void)menuView:(zp01yx_bwusbWMMenuView *)menu didSelesctedIndex:(NSInteger)index currentIndex:(NSInteger)currentIndex;
 - (CGFloat)menuView:(zp01yx_bwusbWMMenuView *)menu widthForItemAtIndex:(NSInteger)index;
 - (CGFloat)menuView:(zp01yx_bwusbWMMenuView *)menu itemMarginAtIndex:(NSInteger)index;
-- (CGFloat)menuView:(zp01yx_bwusbWMMenuView *)menu titleSizeForState:(WMMenuItemState)state atIndex:(NSInteger)index;
-- (UIColor *)menuView:(zp01yx_bwusbWMMenuView *)menu titleColorForState:(WMMenuItemState)state atIndex:(NSInteger)index;
+- (CGFloat)menuView:(zp01yx_bwusbWMMenuView *)menu titleSizeForState:(zp01yx_bwusbWMMenuItemState)state atIndex:(NSInteger)index;
+- (UIColor *)menuView:(zp01yx_bwusbWMMenuView *)menu titleColorForState:(zp01yx_bwusbWMMenuItemState)state atIndex:(NSInteger)index;
 - (void)menuView:(zp01yx_bwusbWMMenuView *)menu didLayoutItemFrame:(zp01yx_bwusbWMMenuItem *)menuItem atIndex:(NSInteger)index;
 @end
 
@@ -75,8 +75,8 @@ typedef NS_ENUM(NSUInteger, WMMenuViewLayoutMode) {
 @property (nonatomic, strong) NSArray *progressWidths;
 @property (nonatomic, weak) zp01yx_bwusbWMProgressView *progressView;
 @property (nonatomic, assign) CGFloat progressHeight;
-@property (nonatomic, assign) WMMenuViewStyle style;
-@property (nonatomic, assign) WMMenuViewLayoutMode layoutMode;
+@property (nonatomic, assign) zp01yx_bwusbWMMenuViewStyle style;
+@property (nonatomic, assign) zp01yx_bwusbWMMenuViewLayoutMode layoutMode;
 @property (nonatomic, assign) CGFloat contentMargin;
 @property (nonatomic, strong) UIColor *lineColor;
 @property (nonatomic, assign) CGFloat progressViewBottomSpace;
