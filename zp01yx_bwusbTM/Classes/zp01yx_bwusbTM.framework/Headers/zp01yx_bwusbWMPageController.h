@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "zp01yx_bwusbWMMenuView.h"
 #import "zp01yx_bwusbWMScrollView.h"
+#import <TMSDK/TMViewController.h>
 
 @class zp01yx_bwusbWMPageController;
 
@@ -131,7 +132,7 @@ extern NSString *const zp01yx_bwusbWMControllerDidFullyDisplayedNotification;
 
 @end
 
-@interface zp01yx_bwusbWMPageController : UIViewController <WMMenuViewDelegate, WMMenuViewDataSource, UIScrollViewDelegate, WMPageControllerDataSource, WMPageControllerDelegate>
+@interface zp01yx_bwusbWMPageController : TMViewController <WMMenuViewDelegate, WMMenuViewDataSource, UIScrollViewDelegate, WMPageControllerDataSource, WMPageControllerDelegate>
 
 @property (nonatomic, weak) id<WMPageControllerDelegate> delegate;
 @property (nonatomic, weak) id<WMPageControllerDataSource> dataSource;
